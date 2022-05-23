@@ -1,0 +1,25 @@
+###########################################################
+**初心者のためSphinx入門-4**
+###########################################################
+
+| このドキュメントもあくまで初歩であり、興味がある人は
+| 自分自身で手を動かし、書籍やWebで公開されている情報を
+| 蒐集することを推奨するものとします。
+
+*Sphinxのお作法*
+
+| ※ 細かい書式や図形の挿入などについては、以下を
+| 　 参照することを推奨する。
+|       https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html
+
+| 参考資料：
+|       sphinxでドキュメント作成からWeb公開までをやってみた
+|       https://qiita.com/kinpira/items/505bccacb2fba89c0ff0
+| 
+|       WSL2+ubuntu20.04: GUI化して使う方法
+|       https://qiita.com/atomyah/items/887a5185ec9a8206c7c4
+| 
+|       Sphinxを使う
+|       https://www.sphinx-doc.org/ja/master/usage/index.html
+
+

@@ -1,0 +1,35 @@
+#########################################################
+**WSL初心者のSphinx入門-1**
+#########################################################
+
+| このドキュメントもあくまで初歩であり、興味がある人は
+| 自分自身で手を動かし、書籍やWebで公開されている情報を
+| 蒐集することを推奨するものとします。
+
+
+*そもそもWSLとは*
+
+| 参考資料:
+|       https://docs.microsoft.com/ja-jp/windows/wsl/about
+|       https://qiita.com/atomyah/items/887a5185ec9a8206c7c4
+| Windows OS 上にアプリケーションとしての仮想化ハイパーバイザーを
+| 介在させることなく、GNU/Linux ディストリビューションの
+| アプリや開発ツール等を実行するためのモノ。ただし、操作環境は
+| 標準だとCUIになるので要注意。
+|  ※ 上記資料のうち、下の記事を参考にすれば、Ubuntuは
+| 　  Windows Proに標準装備されるリモートデスクトップ接続で
+| 　  操作できるようになる。ただし、xrdp環境はGUIが必要な時
+| 　  だけ、サービスをactiveにし、基本はstopすること
+
+*WSLの導入*
+
+| 参考資料：
+|       https://docs.microsoft.com/ja-jp/windows/wsl/install
+| OSのバージョンの条件を満たしたら、PowerShell、もしくは
+| Microsoft Storeアプリから、ディストリビューションを
+| インストールが出来る。
+| ただし、kernel バージョンを上げておくのが望ましいので、
+| 下記も参照しておくのが無難であろう。
+|       https://kledgeb.blogspot.com/2021/04/wsl-219-wsl-2linux-kernellinux-kernel.html
+
+。

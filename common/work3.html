@@ -1,0 +1,220 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>初心者のためSphinx入門-3 &#8212; how-to-build 1.0.0 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cloud.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+
+    
+    
+     
+        <script src="../_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="../_static/cloud.js"></script>
+    
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="初心者のためSphinx入門-4" href="work4.html" />
+    <link rel="prev" title="初心者のためSphinx入門-2" href="work2.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="work4.html" title="初心者のためSphinx入門-4"
+             accesskey="N">次へ</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="work2.html" title="初心者のためSphinx入門-2"
+             accesskey="P">前へ</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">how-to-build 1.0.0 ドキュメント</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href=""><strong>初心者のためSphinx入門-3</strong></a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sphinx-3">
+<h1><strong>初心者のためSphinx入門-3</strong><a class="headerlink" href="#sphinx-3" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">このドキュメントもあくまで初歩であり、興味がある人は</div>
+<div class="line">自分自身で手を動かし、書籍やWebで公開されている情報を</div>
+<div class="line">蒐集することを推奨するものとします。</div>
+</div>
+<p><em>Sphinxのお作法</em></p>
+<div class="line-block">
+<div class="line">※ 細かい書式や図形の挿入などについては、以下を</div>
+<div class="line">　 参照することを推奨する。</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html">https://www.sphinx-doc.org/ja/master/usage/restructuredtext/basics.html</a></div>
+</div>
+</div>
+<p><em>９．githubにhtmlファイルを公開する</em></p>
+<div class="line-block">
+<div class="line">８で確認したhtmlファイルをgithubに公開してみる。</div>
+<div class="line">なお、あらかじめアカウントとリポジトリは、事前に</div>
+<div class="line">用意しておくものとする。</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">$ cd ./_buildhtml</div>
+<div class="line">$ git init</div>
+<div class="line">$ git add .</div>
+<div class="line">$ git commit -m &quot;first commit&quot;</div>
+<div class="line">$ git remote add origin <a class="reference external" href="https://github.com">https://github.com</a>/ユーザ名/リポジトリ名</div>
+</div>
+<div class="line">　$ git push -u origin master</div>
+<div class="line-block">
+<div class="line">※ ユーザ名と、パスワードに代わるトークンを聞かれる。</div>
+</div>
+<div class="line">　　 事前に確認しておくこと。。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">これでマスターデータはアップロードできるので、</div>
+<div class="line">さらに公開用のブランチの作成を実施する。</div>
+<div class="line-block">
+<div class="line">$ git checkout -b gh-pages</div>
+<div class="line">$ git push origin gh-pages</div>
+</div>
+</div>
+<p><em>１０．公開ページのパーミッションやＣＳＳの設定</em></p>
+<div class="line-block">
+<div class="line">Webブラウザでgithubにログインし、作成したプロジェクトの</div>
+<div class="line">リポジトリに移動したうえで、「gh-pages」のブランチに</div>
+<div class="line">移動して、「Add file」をクリックし、「Create new file」と</div>
+<div class="line">操作を進める。タイトルに「.nojekyll</div>
+<div class="line">（ドットエヌオージェイイーケイワイエルエル）」と</div>
+<div class="line">入力し、本文は空欄、「commit new file」をクリックする。</div>
+<div class="line">※ これでGithubのデフォルトのCSSが無効となり、生成した</div>
+<div class="line">　 CSSがActiveになる。</div>
+</div>
+<div class="line-block">
+<div class="line">続いて、ブラウザのページ内のタブの右端、「Setting」に遷移し、</div>
+<div class="line">メニュー内の「pages」をクリックする。</div>
+<div class="line">ブランチを「gh-pages」ディレクトリを「root」にした上で</div>
+<div class="line">「Save」をクリックする。これでデータが公開される。</div>
+</div>
+<p><em>１１．ブラウザから、公開したページを確認する</em></p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https:/">https:/</a>/ユーザ名.github.io/プロジェクトフォルダ/index.html</div>
+<div class="line"><br /></div>
+<div class="line">上記を確認して、書式のズレやリンク切れが無いか、精査する。</div>
+<div class="line">これができれば、読者も立派なSphinxユーザーと自負できるだろう。</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div class="sphinxprev">
+    <h4>Previous page</h4>
+    <p class="topless"><a href="work2.html"
+                          title="Previous page">&larr; <strong>初心者のためSphinx入門-2</strong></a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Next page</h4>
+    <p class="topless"><a href="work4.html"
+                          title="Next page">&rarr; <strong>初心者のためSphinx入門-4</strong></a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/common/work3.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="work4.html" title="初心者のためSphinx入門-4"
+             >次へ</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="work2.html" title="初心者のためSphinx入門-2"
+             >前へ</a> &nbsp; &nbsp;</li>
+    <li><a href="../index.html">how-to-build 1.0.0 ドキュメント</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href=""><strong>初心者のためSphinx入門-3</strong></a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, super-ueda.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
